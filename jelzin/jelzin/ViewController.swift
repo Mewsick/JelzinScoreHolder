@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var inputName: String = ""
     var players: [FirstViewController.player] = []
-    var row = 0
+    var row = 
  
     @IBOutlet weak var tableView: UITableView!
     
