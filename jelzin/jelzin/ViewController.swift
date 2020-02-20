@@ -11,12 +11,19 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var inputName: String = ""
     var players: [FirstViewController.player] = []
-    var row = 0
     var scoreToBeAdded = 0
  
     @IBOutlet weak var scoreLabel: UILabel!
+    
+    @IBOutlet weak var onePlusButton: UIButton!
     @IBOutlet weak var fivePlusButton: UIButton!
-    @IBOutlet weak var addButton: UIButton!
+    @IBOutlet weak var tenPlusButton: UIButton!
+    @IBOutlet weak var oneMinusButton: UIButton!
+    @IBOutlet weak var fiveMinusButton: UIButton!
+    @IBOutlet weak var tenMinusButton: UIButton!
+    
+    
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -31,22 +38,37 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return players.count
     }
     
-    @IBAction func addToPlayerButton(_ sender: Any) {
-        players[row].score = scoreToBeAdded
+    @IBAction func onePlusPressed(_ sender: Any) {
+        scoreToBeAdded += 1
+        scoreLabel.text = scoreToBeAdded.description
+    }
+    @IBAction func fivePlusPressed(_ sender: Any) {
+          scoreToBeAdded += 5
+          scoreLabel.text = scoreToBeAdded.description
+      }
+    @IBAction func tenPlusPressed(_ sender: Any) {
+        scoreToBeAdded += 10
+        scoreLabel.text = scoreToBeAdded.description
+    }
+    @IBAction func oneMinusPressed(_ sender: Any) {
+        scoreToBeAdded -= 1
+        scoreLabel.text = scoreToBeAdded.description
+    }
+    @IBAction func fiveMinusPressed(_ sender: Any) {
+        scoreToBeAdded -= 5
+        scoreLabel.text = scoreToBeAdded.description
+    }
+    @IBAction func tenMinusPressed(_ sender: Any) {
+        scoreToBeAdded -= 10
+        scoreLabel.text = scoreToBeAdded.description
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        players[indexPath.row].score = scoreToBeAdded
         print(players)
         scoreToBeAdded = 0
         scoreLabel.text = scoreToBeAdded.description
-    }
-    
-    @IBAction func fivePlusPressed(_ sender: Any) {
-        scoreToBeAdded += 5
-        scoreLabel.text = scoreToBeAdded.description
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //localCurrentCity = filteredCities[indexPath.row]
-        row = indexPath.row
-        //performSegue(withIdentifier: "mySegue", sender: self)
     }
     
     
