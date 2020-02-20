@@ -11,8 +11,12 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var inputName: String = ""
     var players: [FirstViewController.player] = []
-    var row = 
+    var row = 0
+    var scoreToBeAdded = 0
  
+    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var fivePlusButton: UIButton!
+    @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -27,9 +31,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return players.count
     }
     
+    @IBAction func addToPlayerButton(_ sender: Any) {
+        players[row].score = scoreToBeAdded
+        print(players)
+        scoreToBeAdded = 0
+        scoreLabel.text = scoreToBeAdded.description
+    }
+    
+    @IBAction func fivePlusPressed(_ sender: Any) {
+        scoreToBeAdded += 5
+        scoreLabel.text = scoreToBeAdded.description
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //localCurrentCity = filteredCities[indexPath.row]
-        let index = indexPath.row
+        row = indexPath.row
         //performSegue(withIdentifier: "mySegue", sender: self)
     }
     
