@@ -37,7 +37,7 @@ class FirstViewController: UIViewController{
     
     @IBAction func addPlayerPressed(_ sender: Any) {
         if inputField.text != ""{
-            let text: String = inputField.text ?? "player\(listOfPlayers.count)"
+            let text: String = inputField.text?.uppercased() ?? "player\(listOfPlayers.count)"
             print(text)
             let _player = player(name: text, score: 0)
             listOfPlayers.append(_player)

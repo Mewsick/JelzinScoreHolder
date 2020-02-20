@@ -75,6 +75,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
         cell.textLabel?.text = players[indexPath.row].name
+        cell.setScoreLabel = players[indexPath.row].score.description
         return cell
     }
     
