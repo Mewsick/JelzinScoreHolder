@@ -1,0 +1,603 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		072ECCF323FC9F8F00CF59B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072ECCF223FC9F8F00CF59B8 /* AppDelegate.swift */; };
+		072ECCF523FC9F8F00CF59B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072ECCF423FC9F8F00CF59B8 /* SceneDelegate.swift */; };
+		072ECCF723FC9F8F00CF59B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072ECCF623FC9F8F00CF59B8 /* ViewController.swift */; };
+		072ECCFA23FC9F8F00CF59B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 072ECCF823FC9F8F00CF59B8 /* Main.storyboard */; };
+		072ECCFC23FC9F9600CF59B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 072ECCFB23FC9F9600CF59B8 /* Assets.xcassets */; };
+		072ECCFF23FC9F9600CF59B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 072ECCFD23FC9F9600CF59B8 /* LaunchScreen.storyboard */; };
+		072ECD0A23FC9F9600CF59B8 /* jelzinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072ECD0923FC9F9600CF59B8 /* jelzinTests.swift */; };
+		072ECD1523FC9F9600CF59B8 /* jelzinUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072ECD1423FC9F9600CF59B8 /* jelzinUITests.swift */; };
+		072ECD2323FCA28500CF59B8 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072ECD2223FCA28500CF59B8 /* FirstViewController.swift */; };
+		07923ADE23FED4800083B0B5 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07923ADD23FED4800083B0B5 /* TableViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		072ECD0623FC9F9600CF59B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 072ECCE723FC9F8F00CF59B8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 072ECCEE23FC9F8F00CF59B8;
+			remoteInfo = jelzin;
+		};
+		072ECD1123FC9F9600CF59B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 072ECCE723FC9F8F00CF59B8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 072ECCEE23FC9F8F00CF59B8;
+			remoteInfo = jelzin;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		072ECCEF23FC9F8F00CF59B8 /* jelzin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jelzin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		072ECCF223FC9F8F00CF59B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		072ECCF423FC9F8F00CF59B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		072ECCF623FC9F8F00CF59B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		072ECCF923FC9F8F00CF59B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		072ECCFB23FC9F9600CF59B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		072ECCFE23FC9F9600CF59B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		072ECD0023FC9F9600CF59B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		072ECD0523FC9F9600CF59B8 /* jelzinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jelzinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		072ECD0923FC9F9600CF59B8 /* jelzinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jelzinTests.swift; sourceTree = "<group>"; };
+		072ECD0B23FC9F9600CF59B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		072ECD1023FC9F9600CF59B8 /* jelzinUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jelzinUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		072ECD1423FC9F9600CF59B8 /* jelzinUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jelzinUITests.swift; sourceTree = "<group>"; };
+		072ECD1623FC9F9600CF59B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		072ECD2223FCA28500CF59B8 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		07923ADD23FED4800083B0B5 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		072ECCEC23FC9F8F00CF59B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		072ECD0223FC9F9600CF59B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		072ECD0D23FC9F9600CF59B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		072ECCE623FC9F8F00CF59B8 = {
+			isa = PBXGroup;
+			children = (
+				072ECCF123FC9F8F00CF59B8 /* jelzin */,
+				072ECD0823FC9F9600CF59B8 /* jelzinTests */,
+				072ECD1323FC9F9600CF59B8 /* jelzinUITests */,
+				072ECCF023FC9F8F00CF59B8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		072ECCF023FC9F8F00CF59B8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				072ECCEF23FC9F8F00CF59B8 /* jelzin.app */,
+				072ECD0523FC9F9600CF59B8 /* jelzinTests.xctest */,
+				072ECD1023FC9F9600CF59B8 /* jelzinUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		072ECCF123FC9F8F00CF59B8 /* jelzin */ = {
+			isa = PBXGroup;
+			children = (
+				072ECCF223FC9F8F00CF59B8 /* AppDelegate.swift */,
+				072ECCF423FC9F8F00CF59B8 /* SceneDelegate.swift */,
+				072ECCF623FC9F8F00CF59B8 /* ViewController.swift */,
+				072ECD2223FCA28500CF59B8 /* FirstViewController.swift */,
+				07923ADD23FED4800083B0B5 /* TableViewCell.swift */,
+				072ECCF823FC9F8F00CF59B8 /* Main.storyboard */,
+				072ECCFB23FC9F9600CF59B8 /* Assets.xcassets */,
+				072ECCFD23FC9F9600CF59B8 /* LaunchScreen.storyboard */,
+				072ECD0023FC9F9600CF59B8 /* Info.plist */,
+			);
+			path = jelzin;
+			sourceTree = "<group>";
+		};
+		072ECD0823FC9F9600CF59B8 /* jelzinTests */ = {
+			isa = PBXGroup;
+			children = (
+				072ECD0923FC9F9600CF59B8 /* jelzinTests.swift */,
+				072ECD0B23FC9F9600CF59B8 /* Info.plist */,
+			);
+			path = jelzinTests;
+			sourceTree = "<group>";
+		};
+		072ECD1323FC9F9600CF59B8 /* jelzinUITests */ = {
+			isa = PBXGroup;
+			children = (
+				072ECD1423FC9F9600CF59B8 /* jelzinUITests.swift */,
+				072ECD1623FC9F9600CF59B8 /* Info.plist */,
+			);
+			path = jelzinUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		072ECCEE23FC9F8F00CF59B8 /* jelzin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 072ECD1923FC9F9600CF59B8 /* Build configuration list for PBXNativeTarget "jelzin" */;
+			buildPhases = (
+				072ECCEB23FC9F8F00CF59B8 /* Sources */,
+				072ECCEC23FC9F8F00CF59B8 /* Frameworks */,
+				072ECCED23FC9F8F00CF59B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = jelzin;
+			productName = jelzin;
+			productReference = 072ECCEF23FC9F8F00CF59B8 /* jelzin.app */;
+			productType = "com.apple.product-type.application";
+		};
+		072ECD0423FC9F9600CF59B8 /* jelzinTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 072ECD1C23FC9F9600CF59B8 /* Build configuration list for PBXNativeTarget "jelzinTests" */;
+			buildPhases = (
+				072ECD0123FC9F9600CF59B8 /* Sources */,
+				072ECD0223FC9F9600CF59B8 /* Frameworks */,
+				072ECD0323FC9F9600CF59B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				072ECD0723FC9F9600CF59B8 /* PBXTargetDependency */,
+			);
+			name = jelzinTests;
+			productName = jelzinTests;
+			productReference = 072ECD0523FC9F9600CF59B8 /* jelzinTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		072ECD0F23FC9F9600CF59B8 /* jelzinUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 072ECD1F23FC9F9600CF59B8 /* Build configuration list for PBXNativeTarget "jelzinUITests" */;
+			buildPhases = (
+				072ECD0C23FC9F9600CF59B8 /* Sources */,
+				072ECD0D23FC9F9600CF59B8 /* Frameworks */,
+				072ECD0E23FC9F9600CF59B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				072ECD1223FC9F9600CF59B8 /* PBXTargetDependency */,
+			);
+			name = jelzinUITests;
+			productName = jelzinUITests;
+			productReference = 072ECD1023FC9F9600CF59B8 /* jelzinUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		072ECCE723FC9F8F00CF59B8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Eric Johansson";
+				TargetAttributes = {
+					072ECCEE23FC9F8F00CF59B8 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					072ECD0423FC9F9600CF59B8 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 072ECCEE23FC9F8F00CF59B8;
+					};
+					072ECD0F23FC9F9600CF59B8 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 072ECCEE23FC9F8F00CF59B8;
+					};
+				};
+			};
+			buildConfigurationList = 072ECCEA23FC9F8F00CF59B8 /* Build configuration list for PBXProject "jelzin" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 072ECCE623FC9F8F00CF59B8;
+			productRefGroup = 072ECCF023FC9F8F00CF59B8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				072ECCEE23FC9F8F00CF59B8 /* jelzin */,
+				072ECD0423FC9F9600CF59B8 /* jelzinTests */,
+				072ECD0F23FC9F9600CF59B8 /* jelzinUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		072ECCED23FC9F8F00CF59B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				072ECCFF23FC9F9600CF59B8 /* LaunchScreen.storyboard in Resources */,
+				072ECCFC23FC9F9600CF59B8 /* Assets.xcassets in Resources */,
+				072ECCFA23FC9F8F00CF59B8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		072ECD0323FC9F9600CF59B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		072ECD0E23FC9F9600CF59B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		072ECCEB23FC9F8F00CF59B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07923ADE23FED4800083B0B5 /* TableViewCell.swift in Sources */,
+				072ECCF723FC9F8F00CF59B8 /* ViewController.swift in Sources */,
+				072ECCF323FC9F8F00CF59B8 /* AppDelegate.swift in Sources */,
+				072ECCF523FC9F8F00CF59B8 /* SceneDelegate.swift in Sources */,
+				072ECD2323FCA28500CF59B8 /* FirstViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		072ECD0123FC9F9600CF59B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				072ECD0A23FC9F9600CF59B8 /* jelzinTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		072ECD0C23FC9F9600CF59B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				072ECD1523FC9F9600CF59B8 /* jelzinUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		072ECD0723FC9F9600CF59B8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 072ECCEE23FC9F8F00CF59B8 /* jelzin */;
+			targetProxy = 072ECD0623FC9F9600CF59B8 /* PBXContainerItemProxy */;
+		};
+		072ECD1223FC9F9600CF59B8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 072ECCEE23FC9F8F00CF59B8 /* jelzin */;
+			targetProxy = 072ECD1123FC9F9600CF59B8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		072ECCF823FC9F8F00CF59B8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				072ECCF923FC9F8F00CF59B8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		072ECCFD23FC9F9600CF59B8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				072ECCFE23FC9F9600CF59B8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		072ECD1723FC9F9600CF59B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		072ECD1823FC9F9600CF59B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		072ECD1A23FC9F9600CF59B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P6JN2ZUYF2;
+				INFOPLIST_FILE = jelzin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = E.jelzin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		072ECD1B23FC9F9600CF59B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P6JN2ZUYF2;
+				INFOPLIST_FILE = jelzin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = E.jelzin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		072ECD1D23FC9F9600CF59B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P6JN2ZUYF2;
+				INFOPLIST_FILE = jelzinTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = E.jelzinTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/jelzin.app/jelzin";
+			};
+			name = Debug;
+		};
+		072ECD1E23FC9F9600CF59B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P6JN2ZUYF2;
+				INFOPLIST_FILE = jelzinTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = E.jelzinTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/jelzin.app/jelzin";
+			};
+			name = Release;
+		};
+		072ECD2023FC9F9600CF59B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P6JN2ZUYF2;
+				INFOPLIST_FILE = jelzinUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = E.jelzinUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = jelzin;
+			};
+			name = Debug;
+		};
+		072ECD2123FC9F9600CF59B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P6JN2ZUYF2;
+				INFOPLIST_FILE = jelzinUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = E.jelzinUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = jelzin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		072ECCEA23FC9F8F00CF59B8 /* Build configuration list for PBXProject "jelzin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				072ECD1723FC9F9600CF59B8 /* Debug */,
+				072ECD1823FC9F9600CF59B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		072ECD1923FC9F9600CF59B8 /* Build configuration list for PBXNativeTarget "jelzin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				072ECD1A23FC9F9600CF59B8 /* Debug */,
+				072ECD1B23FC9F9600CF59B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		072ECD1C23FC9F9600CF59B8 /* Build configuration list for PBXNativeTarget "jelzinTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				072ECD1D23FC9F9600CF59B8 /* Debug */,
+				072ECD1E23FC9F9600CF59B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		072ECD1F23FC9F9600CF59B8 /* Build configuration list for PBXNativeTarget "jelzinUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				072ECD2023FC9F9600CF59B8 /* Debug */,
+				072ECD2123FC9F9600CF59B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 072ECCE723FC9F8F00CF59B8 /* Project object */;
+}
