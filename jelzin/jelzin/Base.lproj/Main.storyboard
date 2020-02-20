@@ -86,8 +86,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SV5-gn-Xa6">
-                                <rect key="frame" x="0.0" y="39" width="414" height="774"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SV5-gn-Xa6">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wte-5p-G13">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="309.5"/>
@@ -293,16 +293,17 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="r4b-th-msL" firstAttribute="top" secondItem="Wte-5p-G13" secondAttribute="bottom" id="DKU-l4-3Pk"/>
+                                    <constraint firstItem="Wte-5p-G13" firstAttribute="width" secondItem="SV5-gn-Xa6" secondAttribute="width" id="QoC-0n-EZP"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="r4b-th-msL" secondAttribute="bottom" id="NIJ-J2-xgp"/>
+                            <constraint firstItem="SV5-gn-Xa6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="394-SC-ZpA"/>
+                            <constraint firstItem="SV5-gn-Xa6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="80o-LK-aI4"/>
+                            <constraint firstAttribute="trailing" secondItem="SV5-gn-Xa6" secondAttribute="trailing" id="Ib3-S4-Xac"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SV5-gn-Xa6" secondAttribute="bottom" id="N6g-Xb-Pvc"/>
                             <constraint firstItem="Wte-5p-G13" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.4" id="blx-NK-emE"/>
-                            <constraint firstItem="r4b-th-msL" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.6" id="eML-MS-zl7"/>
-                            <constraint firstItem="Wte-5p-G13" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="hyL-aS-xdA"/>
-                            <constraint firstItem="r4b-th-msL" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="mlf-dE-5vp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
