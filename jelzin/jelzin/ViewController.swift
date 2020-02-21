@@ -15,6 +15,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
  
     @IBOutlet weak var scoreLabel: UILabel!
     
+
     @IBOutlet weak var onePlusButton: UIButton!
     @IBOutlet weak var fivePlusButton: UIButton!
     @IBOutlet weak var tenPlusButton: UIButton!
@@ -29,9 +30,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.alwaysBounceVertical = false
-        // Do any additional setup after loading the view.
         tableView.dataSource = self
         tableView.delegate = self
+        
+        // tableView.regist
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -43,39 +45,40 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         scoreLabel.text = scoreToBeAdded.description
     }
     @IBAction func fivePlusPressed(_ sender: Any) {
-          scoreToBeAdded += 5
-          scoreLabel.text = scoreToBeAdded.description
-      }
+        scoreToBeAdded += 5
+        scoreLabel.text = scoreToBeAdded.description
+    }
     @IBAction func tenPlusPressed(_ sender: Any) {
         scoreToBeAdded += 10
         scoreLabel.text = scoreToBeAdded.description
     }
     @IBAction func oneMinusPressed(_ sender: Any) {
-        scoreToBeAdded -= 1
+        scoreToBeAdded += -1
         scoreLabel.text = scoreToBeAdded.description
     }
     @IBAction func fiveMinusPressed(_ sender: Any) {
-        scoreToBeAdded -= 5
+        scoreToBeAdded += -5
         scoreLabel.text = scoreToBeAdded.description
     }
     @IBAction func tenMinusPressed(_ sender: Any) {
-        scoreToBeAdded -= 10
+        scoreToBeAdded += -10
         scoreLabel.text = scoreToBeAdded.description
     }
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        players[indexPath.row].score = scoreToBeAdded
+        players[indexPath.row].score += scoreToBeAdded
         print(players)
         scoreToBeAdded = 0
         scoreLabel.text = scoreToBeAdded.description
+        tableView.reloadData()
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
-        cell.textLabel?.text = players[indexPath.row].name
-        cell.setScoreLabel = players[indexPath.row].score.description
+        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell") as! TableViewCell
+        cell.setNameLabel(name: players[indexPath.row].name.description)
+        cell.setScoreLabel(score: players[indexPath.row].score.description)
         return cell
     }
     

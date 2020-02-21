@@ -93,45 +93,48 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="309.5"/>
                                         <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="myCell" rowHeight="100" id="xxu-cB-H7s" customClass="TableViewCell" customModule="jelzin" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="414" height="100"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" id="c7b-Ce-LxP" customClass="TableViewCell" customModule="jelzin" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xxu-cB-H7s" id="c8g-Po-qXR">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="c7b-Ce-LxP" id="fOM-PW-MeC">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2C3-pR-rjE">
-                                                            <rect key="frame" x="6" y="5" width="402" height="90"/>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U7T-J7-CRJ">
+                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AtM-B6-w4j">
-                                                                    <rect key="frame" x="120" y="64" width="0.0" height="0.0"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WAF-Qu-VO4">
+                                                                    <rect key="frame" x="99" y="53" width="42" height="20"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nwb-8N-08f">
-                                                                    <rect key="frame" x="97" y="5" width="45" height="118"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRa-B7-Vcc">
+                                                                    <rect key="frame" x="183" y="52" width="42" height="21"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                            <constraints>
+                                                                <constraint firstItem="bRa-B7-Vcc" firstAttribute="leading" secondItem="WAF-Qu-VO4" secondAttribute="trailing" constant="20" id="CnB-rg-xtT"/>
+                                                                <constraint firstItem="bRa-B7-Vcc" firstAttribute="leading" secondItem="U7T-J7-CRJ" secondAttribute="leading" constant="200" id="ZYd-c0-sbg" userLabel="Player Score Label.leading = leading + 50"/>
+                                                                <constraint firstItem="bRa-B7-Vcc" firstAttribute="centerY" secondItem="U7T-J7-CRJ" secondAttribute="centerY" id="f4z-AC-gbm"/>
+                                                                <constraint firstItem="WAF-Qu-VO4" firstAttribute="centerY" secondItem="U7T-J7-CRJ" secondAttribute="centerY" id="x90-sN-npr"/>
+                                                            </constraints>
                                                         </view>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstItem="2C3-pR-rjE" firstAttribute="width" secondItem="c8g-Po-qXR" secondAttribute="width" multiplier="0.97" id="DVe-eX-hcT"/>
-                                                        <constraint firstItem="2C3-pR-rjE" firstAttribute="centerY" secondItem="c8g-Po-qXR" secondAttribute="centerY" id="I9R-HF-qQ6"/>
-                                                        <constraint firstItem="2C3-pR-rjE" firstAttribute="height" secondItem="c8g-Po-qXR" secondAttribute="height" multiplier="0.9" id="oLE-Xa-Ssu"/>
-                                                        <constraint firstItem="2C3-pR-rjE" firstAttribute="centerX" secondItem="c8g-Po-qXR" secondAttribute="centerX" id="p63-GT-54J"/>
+                                                        <constraint firstItem="U7T-J7-CRJ" firstAttribute="height" secondItem="fOM-PW-MeC" secondAttribute="height" id="5b0-p6-dBZ"/>
+                                                        <constraint firstItem="U7T-J7-CRJ" firstAttribute="centerY" secondItem="fOM-PW-MeC" secondAttribute="centerY" id="6Gn-q8-Fhe"/>
+                                                        <constraint firstItem="U7T-J7-CRJ" firstAttribute="centerX" secondItem="fOM-PW-MeC" secondAttribute="centerX" id="dEN-9c-uEO"/>
+                                                        <constraint firstItem="U7T-J7-CRJ" firstAttribute="width" secondItem="fOM-PW-MeC" secondAttribute="width" id="niz-vr-otw"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
-                                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
-                                                    <outlet property="nameLabel" destination="AtM-B6-w4j" id="Rni-LR-CdC"/>
-                                                    <outlet property="scoreLabel" destination="nwb-8N-08f" id="f3a-G9-v6a"/>
+                                                    <outlet property="playerNameLabel" destination="WAF-Qu-VO4" id="YhI-je-70t"/>
+                                                    <outlet property="playerScoreLabel" destination="bRa-B7-Vcc" id="sxp-15-ZtP"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
@@ -152,46 +155,42 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="60l-7d-nAZ">
                                                         <rect key="frame" x="0.0" y="155" width="414" height="154.5"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ggr-BB-m3j" userLabel="One Plus Button">
-                                                                <rect key="frame" x="0.0" y="0.0" width="136" height="154.5"/>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PPd-S0-aOC">
+                                                                <rect key="frame" x="0.0" y="0.0" width="138" height="154.5"/>
                                                                 <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <state key="normal">
                                                                     <attributedString key="attributedTitle">
-                                                                        <fragment content="+ 1">
+                                                                        <fragment content="+1">
                                                                             <attributes>
                                                                                 <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <font key="NSFont" size="64" name="AmericanTypewriter-Bold"/>
                                                                                 <font key="NSOriginalFont" size="64" name="AmericanTypewriter-Bold"/>
-                                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                             </attributes>
                                                                         </fragment>
                                                                     </attributedString>
                                                                 </state>
                                                                 <connections>
-                                                                    <action selector="fivePlusPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QYr-jk-2R5"/>
-                                                                    <action selector="onePlusPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oOM-Bg-lms"/>
+                                                                    <action selector="onePlusPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lIC-uc-woE"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IVo-by-f26">
-                                                                <rect key="frame" x="136" y="0.0" width="140" height="154.5"/>
-                                                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m0r-qI-bvC">
+                                                                <rect key="frame" x="138" y="0.0" width="138" height="154.5"/>
+                                                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <state key="normal">
                                                                     <attributedString key="attributedTitle">
-                                                                        <fragment content="+ 5">
+                                                                        <fragment content="+5">
                                                                             <attributes>
                                                                                 <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <font key="NSFont" size="64" name="AmericanTypewriter-Bold"/>
-                                                                                <font key="NSOriginalFont" size="64" name="AmericanTypewriter-Bold"/>
-                                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                             </attributes>
                                                                         </fragment>
                                                                     </attributedString>
                                                                 </state>
                                                                 <connections>
-                                                                    <action selector="fivePlusPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ThM-Oe-cFN"/>
+                                                                    <action selector="fivePlusPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ICA-6u-JfT"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wei-rM-wHJ" userLabel="Ten Plus Button">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TdT-bK-DN7">
                                                                 <rect key="frame" x="276" y="0.0" width="138" height="154.5"/>
                                                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <state key="normal">
@@ -200,20 +199,19 @@
                                                                             <attributes>
                                                                                 <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <font key="NSFont" size="64" name="AmericanTypewriter-Bold"/>
-                                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                             </attributes>
                                                                         </fragment>
                                                                     </attributedString>
                                                                 </state>
                                                                 <connections>
-                                                                    <action selector="fivePlusPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hSH-Ks-ncV"/>
-                                                                    <action selector="tenPlusPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rja-4F-QkT"/>
+                                                                    <action selector="tenPlusPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XTU-CR-ZA2"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
                                                         <constraints>
-                                                            <constraint firstItem="IVo-by-f26" firstAttribute="width" secondItem="60l-7d-nAZ" secondAttribute="width" multiplier="0.333333" constant="2" id="J4D-Db-z53"/>
-                                                            <constraint firstItem="wei-rM-wHJ" firstAttribute="width" secondItem="60l-7d-nAZ" secondAttribute="width" multiplier="0.333333" id="apY-yY-GZh"/>
+                                                            <constraint firstItem="PPd-S0-aOC" firstAttribute="width" secondItem="60l-7d-nAZ" secondAttribute="width" multiplier="0.333333" id="StN-1V-jrx"/>
+                                                            <constraint firstItem="m0r-qI-bvC" firstAttribute="width" secondItem="60l-7d-nAZ" secondAttribute="width" multiplier="0.333333" id="x7W-Lf-jF8"/>
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VOL-he-jml">
@@ -314,13 +312,13 @@
                     <navigationItem key="navigationItem" id="5UH-Wo-Tiw"/>
                     <connections>
                         <outlet property="fiveMinusButton" destination="7BZ-gC-E82" id="SkO-hT-hXz"/>
-                        <outlet property="fivePlusButton" destination="IVo-by-f26" id="GI1-VZ-bOH"/>
+                        <outlet property="fivePlusButton" destination="m0r-qI-bvC" id="6ZA-6H-UeE"/>
                         <outlet property="oneMinusButton" destination="aT0-N6-dHi" id="bf8-5A-E0q"/>
-                        <outlet property="onePlusButton" destination="ggr-BB-m3j" id="Psd-Hf-98w"/>
+                        <outlet property="onePlusButton" destination="PPd-S0-aOC" id="xzY-8k-xRx"/>
                         <outlet property="scoreLabel" destination="mps-LM-ZWK" id="OKs-OB-vL4"/>
                         <outlet property="tableView" destination="Wte-5p-G13" id="EWp-Zf-Hsm"/>
                         <outlet property="tenMinusButton" destination="rSx-cW-LwO" id="fuW-l5-Vqo"/>
-                        <outlet property="tenPlusButton" destination="wei-rM-wHJ" id="aph-e6-sN8"/>
+                        <outlet property="tenPlusButton" destination="TdT-bK-DN7" id="9QB-ul-STP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

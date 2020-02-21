@@ -39,16 +39,10 @@ class FirstViewController: UIViewController{
         if inputField.text != ""{
             let text: String = inputField.text?.uppercased() ?? "player\(listOfPlayers.count)"
             print(text)
-            let _player = player(name: text, score: 0)
-            listOfPlayers.append(_player)
+            let tempPlayer = player(name: text, score: 0)
+            listOfPlayers.append(tempPlayer)
             print(listOfPlayers)
             inputField.text = ""
         }
     }
-    
-    /*func inputFieldAction(_ sender: Any) {
-        let text = inputField.description
-        print(text)
-        print(listOfPlayers)
-    }*/
 }

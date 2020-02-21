@@ -10,12 +10,15 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
 
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var scoreLabel: UILabel!
+    
+    @IBOutlet weak var playerScoreLabel: UILabel!
+    @IBOutlet weak var playerNameLabel: UILabel!
     
     func setScoreLabel(score: String){
-        self.scoreLabel.text = score
+        self.playerScoreLabel.text = score
     }
-
-
+    
+    func setNameLabel(name: String){
+        self.playerNameLabel.text = name
+    }
 }
