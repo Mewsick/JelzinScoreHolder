@@ -44,6 +44,7 @@ class FirstViewController: UIViewController, CallbackDelegate{
             listOfPlayers.append(player(name: text, score: 0))
             print(listOfPlayers)
             inputField.text = ""
+            self.view.endEditing(true)
         }
     }
     

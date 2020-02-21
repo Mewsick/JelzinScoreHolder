@@ -17,6 +17,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var players: [player] = []
     var scoreToBeAdded = 0
     var delegate: CallbackDelegate?
+    var turns: Int = 0
     
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var onePlusButton: UIButton!
@@ -33,7 +34,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.alwaysBounceVertical = false
         tableView.dataSource = self
         tableView.delegate = self
-        self.tableView.rowHeight = tableViewHeight RÄTTA TILL!
+        tableView.rowHeight = tableViewHeight// RÄTTA TILL!
+        print(tableViewHeight)//RÄTTA TILL!
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -76,11 +78,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        players[indexPath.row].score += scoreToBeAdded
-        print(players)
-        scoreToBeAdded = 0
-        scoreLabel.text = scoreToBeAdded.description
-        tableView.reloadData()
+            players[indexPath.row].score += scoreToBeAdded
+            print(players)
+            scoreToBeAdded = 0
+            scoreLabel.text = scoreToBeAdded.description
+            players = players.sorted(by: { $0.score < $1.score })
+            tableView.reloadData()
+            turns += 1
+            if turns == players.count{
+                turns = 0
+                if players.last!.score > 49{
+                    scoreLabel.text = "\(players.first!.name) vann!"
+                    print("\(players.first!.name) vann!")
+                }
+            }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -90,9 +101,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
     
-    var tableViewHeight: CGFloat { RÄTTA TILL!
+    var tableViewHeight: CGFloat { //RÄTTA TILL!
         tableView.layoutIfNeeded()
-
         return tableView.contentSize.height/CGFloat(players.count)
     }
 }
