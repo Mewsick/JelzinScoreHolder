@@ -8,14 +8,17 @@
 
 import UIKit
 
+protocol CallbackDelegate: NSObjectProtocol {
+    func setPlayers(players: [player])
+}
+
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var inputName: String = ""
-    var players: [FirstViewController.player] = []
+    var players: [player] = []
     var scoreToBeAdded = 0
- 
-    @IBOutlet weak var scoreLabel: UILabel!
+    var delegate: CallbackDelegate?
     
-
+    @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var onePlusButton: UIButton!
     @IBOutlet weak var fivePlusButton: UIButton!
     @IBOutlet weak var tenPlusButton: UIButton!
@@ -23,17 +26,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var fiveMinusButton: UIButton!
     @IBOutlet weak var tenMinusButton: UIButton!
     
-    
-    
     @IBOutlet weak var tableView: UITableView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.alwaysBounceVertical = false
         tableView.dataSource = self
         tableView.delegate = self
-        
-        // tableView.regist
+        self.tableView.rowHeight = tableViewHeight RÄTTA TILL!
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        if let delegate = delegate {
+            delegate.setPlayers(players: players)
+            print("ViewWillDisappear\(players)")
+        } else {
+            print("Delegate is null")
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -74,7 +83,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.reloadData()
     }
     
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell") as! TableViewCell
         cell.setNameLabel(name: players[indexPath.row].name.description)
@@ -82,5 +90,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
     
+    var tableViewHeight: CGFloat { RÄTTA TILL!
+        tableView.layoutIfNeeded()
+
+        return tableView.contentSize.height/CGFloat(players.count)
+    }
 }
 

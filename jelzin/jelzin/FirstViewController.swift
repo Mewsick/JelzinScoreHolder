@@ -8,30 +8,32 @@
 
 import UIKit
 
-class FirstViewController: UIViewController{
-    
+struct player {
+    var name: String
+    var score: Int
+}
+
+class FirstViewController: UIViewController, CallbackDelegate{
+   
     @IBOutlet weak var inputField: UITextField!
     @IBOutlet weak var addPlayer: UIButton!
     
     var listOfPlayers: [player] = []
     
-    struct player {
-        var name: String
-        var score: Int
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("viewdidload\(listOfPlayers)")
     }
     
    @IBAction func pressForReadyToPlay(_ sender: Any) {
-        
+        print(listOfPlayers)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is ViewController{
             let vc = segue.destination as? ViewController
             vc?.players = listOfPlayers
+            vc?.delegate = self
        }
     }
     
@@ -39,10 +41,14 @@ class FirstViewController: UIViewController{
         if inputField.text != ""{
             let text: String = inputField.text?.uppercased() ?? "player\(listOfPlayers.count)"
             print(text)
-            let tempPlayer = player(name: text, score: 0)
-            listOfPlayers.append(tempPlayer)
+            listOfPlayers.append(player(name: text, score: 0))
             print(listOfPlayers)
             inputField.text = ""
         }
+    }
+    
+    func setPlayers(players: [player]) {
+        listOfPlayers = players
+        print("players set: \(listOfPlayers)")
     }
 }
