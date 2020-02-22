@@ -42,9 +42,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.dataSource = self
         tableView.delegate = self
         if players.count < 6 {
-            tableView.rowHeight = ((screenHeight - 130) * 0.6)/CGFloat(players.count)
+            tableView.rowHeight = ((screenHeight - 125) * 0.6)/CGFloat(players.count)
         }else{
-            tableView.rowHeight = ((screenHeight - 130) * 0.6)/CGFloat(5)
+            tableView.rowHeight = ((screenHeight - 125) * 0.6)/CGFloat(5)
         }
     }
     
@@ -88,7 +88,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             tableView.reloadData()
             scoreChanged = false
         }
-        //uppdatera scoreLabel om man trycker undo vid vinst
+        scoreLabel.text = "0"
+        scoreToBeAdded = 0
     }
     
     @IBAction func resetScorePressed(_ sender: Any) {
