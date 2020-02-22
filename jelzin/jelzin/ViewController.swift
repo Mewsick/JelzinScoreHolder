@@ -88,16 +88,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             tableView.reloadData()
             scoreChanged = false
         }
-        //uppdatera scoreLabel
+        //uppdatera scoreLabel om man trycker undo vid vinst
     }
     
     @IBAction func resetScorePressed(_ sender: Any) {
-        playersBackup = players
-        scoreChanged = true
-        for i in 0...players.count - 1{
-            players[i].score = 0
+        if !players.isEmpty{
+            playersBackup = players
+            scoreChanged = true
+            for i in 0...players.count - 1{
+                players[i].score = 0
+            }
+            tableView.reloadData()
+            scoreToBeAdded = 0
         }
-        tableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
