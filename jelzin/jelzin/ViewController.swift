@@ -21,6 +21,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var delegate: CallbackDelegate?
     var turns: Int = 0
     var playersBackup: [player] = []
+    var isReset: Bool = false
     
     @IBOutlet weak var undoButton: UIButton!
     @IBOutlet weak var scoreLabel: UILabel!
@@ -79,12 +80,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         scoreToBeAdded += -5
         scoreLabel.text = scoreToBeAdded.description
     }
+    
     @IBAction func undoPressed(_ sender: Any) {
-        players = playersBackup
-        tableView.reloadData()
+        if isReset{
+            players = playersBackup
+            tableView.reloadData()
+            isReset = false
+        }
     }
     @IBAction func resetScorePressed(_ sender: Any) {
         playersBackup = players
+        isReset = true
         for i in 0...players.count - 1{
             players[i].score = 0
         }
@@ -92,20 +98,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            players[indexPath.row].score += scoreToBeAdded
-            print(players)
-            scoreToBeAdded = 0
-            scoreLabel.text = scoreToBeAdded.description
-            players = players.sorted(by: { $0.score < $1.score })
-            tableView.reloadData()
-            turns += 1
-            if turns == players.count{
-                turns = 0
-                if players.last!.score > 49{
-                    scoreLabel.text = "\(players.first!.name) vann!"
-                    print("\(players.first!.name) vann!")
-                }
+        if !playersBackup.isEmpty{
+            players = playersBackup
+        }
+        players[indexPath.row].score += scoreToBeAdded
+        print(players)
+        scoreToBeAdded = 0
+        scoreLabel.text = scoreToBeAdded.description
+        players = players.sorted(by: { $0.score < $1.score })
+        tableView.reloadData()
+        turns += 1
+        if turns == players.count{
+            turns = 0
+            if players.last!.score > 49{
+                scoreLabel.text = "\(players.first!.name) vann!"
+                print("\(players.first!.name) vann!")
             }
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
