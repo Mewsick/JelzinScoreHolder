@@ -21,7 +21,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var delegate: CallbackDelegate?
     var turns: Int = 0
     var playersBackup: [player] = []
-    var isReset: Bool = false
+    var scoreChanged: Bool = false
     
     @IBOutlet weak var undoButton: UIButton!
     @IBOutlet weak var scoreLabel: UILabel!
@@ -82,15 +82,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     @IBAction func undoPressed(_ sender: Any) {
-        if isReset{
+        if scoreChanged{
             players = playersBackup
             tableView.reloadData()
-            isReset = false
+            scoreChanged = false
         }
     }
+    
     @IBAction func resetScorePressed(_ sender: Any) {
         playersBackup = players
-        isReset = true
+        scoreChanged = true
         for i in 0...players.count - 1{
             players[i].score = 0
         }
@@ -98,9 +99,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if !playersBackup.isEmpty{
+        if scoreChanged{
             players = playersBackup
+            tableView.reloadData()
+        }else{
+            playersBackup = players
         }
+        scoreChanged = true
         players[indexPath.row].score += scoreToBeAdded
         print(players)
         scoreToBeAdded = 0
