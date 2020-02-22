@@ -240,8 +240,18 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VOL-he-jml">
                                                         <rect key="frame" x="0.0" y="206.5" width="414" height="103"/>
                                                         <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IXZ-tp-QLP" userLabel="undoButton">
+                                                                <rect key="frame" x="0.0" y="0.0" width="64.5" height="103"/>
+                                                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="18"/>
+                                                                <state key="normal" title="undo">
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="undoPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KTH-hQ-ZDd"/>
+                                                                </connections>
+                                                            </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aT0-N6-dHi">
-                                                                <rect key="frame" x="0.0" y="0.0" width="138" height="103"/>
+                                                                <rect key="frame" x="64.5" y="0.0" width="138" height="103"/>
                                                                 <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <state key="normal">
                                                                     <attributedString key="attributedTitle">
@@ -260,7 +270,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7BZ-gC-E82">
-                                                                <rect key="frame" x="138" y="0.0" width="138" height="103"/>
+                                                                <rect key="frame" x="202.5" y="0.0" width="138" height="103"/>
                                                                 <state key="normal">
                                                                     <attributedString key="attributedTitle">
                                                                         <fragment content="-5">
@@ -277,14 +287,14 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rSx-cW-LwO">
-                                                                <rect key="frame" x="276" y="0.0" width="138" height="103"/>
+                                                                <rect key="frame" x="340.5" y="0.0" width="73.5" height="103"/>
                                                                 <color key="backgroundColor" red="0.94471795935043112" green="0.23755533992377886" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <state key="normal">
                                                                     <attributedString key="attributedTitle">
-                                                                        <fragment content="-10">
+                                                                        <fragment content="Reset">
                                                                             <attributes>
                                                                                 <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                                <font key="NSFont" size="64" name="AmericanTypewriter-Bold"/>
+                                                                                <font key="NSFont" size="18" name="AmericanTypewriter-Bold"/>
                                                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                             </attributes>
                                                                         </fragment>
@@ -298,6 +308,7 @@
                                                         <constraints>
                                                             <constraint firstItem="7BZ-gC-E82" firstAttribute="width" secondItem="VOL-he-jml" secondAttribute="width" multiplier="0.333333" id="Oy4-RF-bvv"/>
                                                             <constraint firstItem="aT0-N6-dHi" firstAttribute="width" secondItem="VOL-he-jml" secondAttribute="width" multiplier="0.3333" id="XpA-75-CAi"/>
+                                                            <constraint firstItem="IXZ-tp-QLP" firstAttribute="width" secondItem="VOL-he-jml" secondAttribute="width" multiplier="0.155555" id="t0c-6G-EJ2"/>
                                                         </constraints>
                                                     </stackView>
                                                 </subviews>
@@ -342,6 +353,7 @@
                         <outlet property="tableView" destination="Wte-5p-G13" id="EWp-Zf-Hsm"/>
                         <outlet property="tenMinusButton" destination="rSx-cW-LwO" id="fuW-l5-Vqo"/>
                         <outlet property="tenPlusButton" destination="TdT-bK-DN7" id="9QB-ul-STP"/>
+                        <outlet property="undoButton" destination="IXZ-tp-QLP" id="GbA-sq-8MB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -20,7 +20,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var scoreToBeAdded = 0
     var delegate: CallbackDelegate?
     var turns: Int = 0
+    var playersBackup: [player] = []
     
+    @IBOutlet weak var undoButton: UIButton!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var onePlusButton: UIButton!
     @IBOutlet weak var fivePlusButton: UIButton!
@@ -76,11 +78,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         scoreToBeAdded += -5
         scoreLabel.text = scoreToBeAdded.description
     }
-    @IBAction func tenMinusPressed(_ sender: Any) {
-        
-        //players.forEach { $0.score = 0)}
-        scoreToBeAdded += -10
-        scoreLabel.text = scoreToBeAdded.description
+    
+    @IBAction func resetScores(_ sender: Any) {
+        playersBackup = players
+        for i in 0...players.count - 1{
+            players[i].score = 0
+        }
+        tableView.reloadData()
+    }
+    
+    @IBAction func undoPressed(_ sender: Any) {
+        players = playersBackup
+        tableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
