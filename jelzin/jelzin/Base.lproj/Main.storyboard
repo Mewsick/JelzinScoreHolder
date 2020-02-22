@@ -113,7 +113,7 @@
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wte-5p-G13">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="464.5"/>
-                                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="separatorColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" id="c7b-Ce-LxP" customClass="TableViewCell" customModule="jelzin" customModuleProvider="target">
@@ -243,7 +243,7 @@
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IXZ-tp-QLP" userLabel="undoButton">
                                                                 <rect key="frame" x="0.0" y="0.0" width="64.5" height="103"/>
                                                                 <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="18"/>
-                                                                <state key="normal" title="undo">
+                                                                <state key="normal" title="Undo">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
                                                                 <connections>
@@ -286,7 +286,7 @@
                                                                     <action selector="fiveMinusPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kLp-IM-4ak"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rSx-cW-LwO">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rSx-cW-LwO" userLabel="reset score">
                                                                 <rect key="frame" x="340.5" y="0.0" width="73.5" height="103"/>
                                                                 <color key="backgroundColor" red="0.94471795935043112" green="0.23755533992377886" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <state key="normal">
@@ -301,7 +301,7 @@
                                                                     </attributedString>
                                                                 </state>
                                                                 <connections>
-                                                                    <action selector="tenMinusPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IBH-xn-B98"/>
+                                                                    <action selector="resetScorePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6WL-mw-daL"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -349,9 +349,9 @@
                         <outlet property="fivePlusButton" destination="m0r-qI-bvC" id="6ZA-6H-UeE"/>
                         <outlet property="oneMinusButton" destination="aT0-N6-dHi" id="bf8-5A-E0q"/>
                         <outlet property="onePlusButton" destination="PPd-S0-aOC" id="xzY-8k-xRx"/>
+                        <outlet property="resetScoreButton" destination="rSx-cW-LwO" id="CJa-p1-bfU"/>
                         <outlet property="scoreLabel" destination="mps-LM-ZWK" id="OKs-OB-vL4"/>
                         <outlet property="tableView" destination="Wte-5p-G13" id="EWp-Zf-Hsm"/>
-                        <outlet property="tenMinusButton" destination="rSx-cW-LwO" id="fuW-l5-Vqo"/>
                         <outlet property="tenPlusButton" destination="TdT-bK-DN7" id="9QB-ul-STP"/>
                         <outlet property="undoButton" destination="IXZ-tp-QLP" id="GbA-sq-8MB"/>
                     </connections>

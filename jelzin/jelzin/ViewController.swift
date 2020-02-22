@@ -29,7 +29,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var tenPlusButton: UIButton!
     @IBOutlet weak var oneMinusButton: UIButton!
     @IBOutlet weak var fiveMinusButton: UIButton!
-    @IBOutlet weak var tenMinusButton: UIButton!
+    @IBOutlet weak var resetScoreButton: UIButton!
+    
     
     @IBOutlet weak var tableView: UITableView!
 
@@ -78,17 +79,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         scoreToBeAdded += -5
         scoreLabel.text = scoreToBeAdded.description
     }
-    
-    @IBAction func resetScores(_ sender: Any) {
+    @IBAction func undoPressed(_ sender: Any) {
+        players = playersBackup
+        tableView.reloadData()
+    }
+    @IBAction func resetScorePressed(_ sender: Any) {
         playersBackup = players
         for i in 0...players.count - 1{
             players[i].score = 0
         }
-        tableView.reloadData()
-    }
-    
-    @IBAction func undoPressed(_ sender: Any) {
-        players = playersBackup
         tableView.reloadData()
     }
     
