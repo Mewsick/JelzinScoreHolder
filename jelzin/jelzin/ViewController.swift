@@ -12,9 +12,7 @@ protocol CallbackDelegate: NSObjectProtocol {
     func setPlayers(players: [player])
 }
 
-let screenSize = UIScreen.main.bounds
-   let screenWidth = screenSize.width
-   let screenHeight = screenSize.height
+let screenHeight = UIScreen.main.bounds.height
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var inputName: String = ""
@@ -38,7 +36,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.alwaysBounceVertical = false
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.rowHeight = (screenHeight * 0.6)/CGFloat(players.count)
+        if players.count < 6 {
+            tableView.rowHeight = ((screenHeight - 130) * 0.6)/CGFloat(players.count)
+        }else{
+            tableView.rowHeight = ((screenHeight - 130) * 0.6)/CGFloat(5)
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
