@@ -12,6 +12,10 @@ protocol CallbackDelegate: NSObjectProtocol {
     func setPlayers(players: [player])
 }
 
+let screenSize = UIScreen.main.bounds
+   let screenWidth = screenSize.width
+   let screenHeight = screenSize.height
+
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var inputName: String = ""
     var players: [player] = []
@@ -34,8 +38,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.alwaysBounceVertical = false
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.rowHeight = tableViewHeight// RÄTTA TILL!
-        print(tableViewHeight)//RÄTTA TILL!
+        tableView.rowHeight = (screenHeight * 0.6)/CGFloat(players.count)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -72,10 +75,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         scoreLabel.text = scoreToBeAdded.description
     }
     @IBAction func tenMinusPressed(_ sender: Any) {
+        
+        //players.forEach { $0.score = 0)}
         scoreToBeAdded += -10
         scoreLabel.text = scoreToBeAdded.description
     }
-    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             players[indexPath.row].score += scoreToBeAdded
@@ -99,11 +103,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.setNameLabel(name: players[indexPath.row].name.description)
         cell.setScoreLabel(score: players[indexPath.row].score.description)
         return cell
-    }
-    
-    var tableViewHeight: CGFloat { //RÄTTA TILL!
-        tableView.layoutIfNeeded()
-        return tableView.contentSize.height/CGFloat(players.count)
     }
 }
 
