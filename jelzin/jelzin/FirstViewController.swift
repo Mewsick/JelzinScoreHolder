@@ -15,10 +15,13 @@ struct player {
 
 class FirstViewController: UIViewController, CallbackDelegate{
    
+    
+   
     @IBOutlet weak var inputField: UITextField!
     @IBOutlet weak var addPlayer: UIButton!
     
     var listOfPlayers: [player] = []
+    var hasBegun: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +30,10 @@ class FirstViewController: UIViewController, CallbackDelegate{
     
    @IBAction func pressForReadyToPlay(_ sender: Any) {
         print(listOfPlayers)
+        if listOfPlayers.count != 0 {
+            performSegue(withIdentifier: "secondSegue", sender: self)
+            
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -52,4 +59,8 @@ class FirstViewController: UIViewController, CallbackDelegate{
         listOfPlayers = players
         print("players set: \(listOfPlayers)")
     }
+    
+    func setHasBegun(b: Bool) {
+           hasBegun = b
+       }
 }

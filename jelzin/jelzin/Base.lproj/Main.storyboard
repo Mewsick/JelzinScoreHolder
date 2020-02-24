@@ -42,7 +42,6 @@
                                         </state>
                                         <connections>
                                             <action selector="addPlayerPressed:" destination="Ezt-mY-Snw" eventType="touchUpInside" id="5tN-wq-A6p"/>
-                                            <action selector="pressForReadyToPlay:" destination="Ezt-mY-Snw" eventType="touchUpInside" id="ba6-AS-GQn"/>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hzg-T1-ZCw" userLabel="BottomView">
@@ -62,7 +61,6 @@
                                         </state>
                                         <connections>
                                             <action selector="pressForReadyToPlay:" destination="Ezt-mY-Snw" eventType="touchUpInside" id="Dw0-7Q-ajf"/>
-                                            <segue destination="BYZ-38-t0r" kind="show" identifier="secondSegue" id="aOP-Et-kBv"/>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sPs-Yt-0k6">
@@ -94,6 +92,7 @@
                         <outlet property="addPlayer" destination="bav-W6-ZgV" id="XO7-13-1uK"/>
                         <outlet property="inputField" destination="dQg-nN-yue" id="lHI-U4-CPd"/>
                         <outlet property="view" destination="nt5-J0-8fs" id="kfd-FL-2uF"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="secondSegue" id="aPp-Dc-1MM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MVe-Su-a5f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
