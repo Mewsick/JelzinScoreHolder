@@ -10,6 +10,7 @@ import UIKit
 
 protocol CallbackDelegate: NSObjectProtocol {
     func setPlayers(players: [player])
+    func setHasBegun(b: Bool)
 }
 
 let screenHeight = UIScreen.main.bounds.height
@@ -20,6 +21,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var scoreToBeAdded = 0
     var delegate: CallbackDelegate?
     var turns: Int = 0
+    //var turnsBackup: Int = 0
     var playersBackup: [player] = []
     var scoreChanged: Bool = false
     var hasBegun: Bool = false
@@ -51,6 +53,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewWillDisappear(_ animated: Bool) {
         if let delegate = delegate {
             delegate.setPlayers(players: players)
+            delegate.setHasBegun(b: hasBegun)
             print("ViewWillDisappear\(players)")
         } else {
             print("Delegate is null")
@@ -85,6 +88,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBAction func undoPressed(_ sender: Any) {
         if scoreChanged{
             players = playersBackup
+            turns -= 1
+            //turns = turnsBackup
             tableView.reloadData()
             scoreChanged = false
         }
@@ -93,6 +98,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     @IBAction func resetScorePressed(_ sender: Any) {
+        //lägg till turns -= 1
         if !players.isEmpty{
             playersBackup = players
             scoreChanged = true
@@ -101,9 +107,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             }
             tableView.reloadData()
             scoreToBeAdded = 0
+            turns = 0
+            scoreLabel.text = "0"
         }
     }
-    
+    //Lägg till vinnar-event vid undo
     //undvik att score nollställs efter andra klicket
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if !playersBackup.isEmpty && !hasBegun{
@@ -123,6 +131,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.reloadData()
         turns += 1
         if turns == players.count{
+            //turnsBackup = turns
             turns = 0
             if players.last!.score > 49{
                 scoreLabel.text = "\(players.first!.name) vann!"

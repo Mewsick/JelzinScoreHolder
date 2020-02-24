@@ -15,17 +15,22 @@ struct player {
 
 class FirstViewController: UIViewController, CallbackDelegate{
    
-    
-   
     @IBOutlet weak var inputField: UITextField!
     @IBOutlet weak var addPlayer: UIButton!
     
+    @IBOutlet var touchView: UIView!
     var listOfPlayers: [player] = []
     var hasBegun: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("viewdidload\(listOfPlayers)")
+        let gesture = UITapGestureRecognizer(target: self, action:  #selector(self.checkAction))
+        self.touchView.addGestureRecognizer(gesture)
+    }
+    
+    @objc func checkAction(sender : UITapGestureRecognizer) {
+        self.view.endEditing(true)
     }
     
    @IBAction func pressForReadyToPlay(_ sender: Any) {
