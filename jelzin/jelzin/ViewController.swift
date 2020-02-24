@@ -104,6 +104,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
+    //undvik att score nollställs efter andra klicket
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if !playersBackup.isEmpty && !hasBegun{
             players = playersBackup

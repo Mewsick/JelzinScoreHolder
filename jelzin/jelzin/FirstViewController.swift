@@ -32,7 +32,6 @@ class FirstViewController: UIViewController, CallbackDelegate{
         print(listOfPlayers)
         if listOfPlayers.count != 0 {
             performSegue(withIdentifier: "secondSegue", sender: self)
-            
         }
     }
     
