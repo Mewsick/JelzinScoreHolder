@@ -1,0 +1,6 @@
+framework module Pods_jelzinTests {
+  umbrella header "Pods-jelzinTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

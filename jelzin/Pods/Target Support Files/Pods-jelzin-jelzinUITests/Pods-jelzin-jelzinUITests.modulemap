@@ -1,0 +1,6 @@
+framework module Pods_jelzin_jelzinUITests {
+  umbrella header "Pods-jelzin-jelzinUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

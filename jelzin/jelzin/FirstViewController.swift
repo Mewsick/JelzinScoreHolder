@@ -7,20 +7,25 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 struct player {
     var name: String
     var score: Int
+    var wonGames: Int
+    var turn: Int
 }
 
 class FirstViewController: UIViewController, CallbackDelegate{
-   
+    
+    var listOfPlayers: [player] = []
+    var isPlaying: Bool = true
+    var gameTurns: Int = 0
+    let ref = Database.database().reference()
+    
     @IBOutlet weak var inputField: UITextField!
     @IBOutlet weak var addPlayer: UIButton!
-    
     @IBOutlet var touchView: UIView!
-    var listOfPlayers: [player] = []
-    var hasBegun: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +39,6 @@ class FirstViewController: UIViewController, CallbackDelegate{
     }
     
    @IBAction func pressForReadyToPlay(_ sender: Any) {
-        print(listOfPlayers)
         if listOfPlayers.count != 0 {
             performSegue(withIdentifier: "secondSegue", sender: self)
         }
@@ -45,17 +49,48 @@ class FirstViewController: UIViewController, CallbackDelegate{
             let vc = segue.destination as? ViewController
             vc?.players = listOfPlayers
             vc?.delegate = self
+            vc?.isPlaying = isPlaying
+            vc?.gameTurns = gameTurns
        }
     }
     
     @IBAction func addPlayerPressed(_ sender: Any) {
         if inputField.text != ""{
             let text: String = inputField.text?.uppercased() ?? "player\(listOfPlayers.count)"
+            
+            var pscore: Int = 0
+            ref.child("Players/" + text + "/score").observeSingleEvent(of: .value) { (snapshot) in
+                let playerScore = snapshot.value as? String
+                //print(playerStats!)
+                if playerScore != nil{
+                    pscore = Int(playerScore!)!
+                }
+            }
+            
+            var pWon: Int = 0
+            ref.child("Players/" + text + "/wonGames").observeSingleEvent(of: .value) { (snapshot) in
+                let playerWon = snapshot.value as? String
+                //print(playerStats!)
+                if playerWon != nil{
+                    pWon = Int(playerWon!)!
+                }
+            }
+            
             print(text)
-            listOfPlayers.append(player(name: text, score: 0))
-            print(listOfPlayers)
-            inputField.text = ""
-            self.view.endEditing(true)
+            print(pscore)
+            run(after: 1) {
+                self.listOfPlayers.append(player(name: text, score: pscore, wonGames: pWon, turn: self.gameTurns - 1))
+                print(self.listOfPlayers)
+                self.inputField.text = ""
+                self.view.endEditing(true)
+            }
+        }
+    }
+    
+    func run(after seconds: Int, completion: @escaping () -> Void) {
+        let deadline = DispatchTime.now() + .seconds(seconds)
+        DispatchQueue.main.asyncAfter(deadline: deadline) {
+            completion()
         }
     }
     
@@ -64,7 +99,11 @@ class FirstViewController: UIViewController, CallbackDelegate{
         print("players set: \(listOfPlayers)")
     }
     
-    func setHasBegun(b: Bool) {
-           hasBegun = b
+    func setIsPlaying(b: Bool) {
+           isPlaying = b
+       }
+    
+    func setGameTurns(gt: Int) {
+           gameTurns = gt
        }
 }

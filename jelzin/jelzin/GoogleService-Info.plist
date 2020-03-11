@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>342841512539-ftji0se6s57ul5jaf7ncvrqfldhk8f54.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.342841512539-ftji0se6s57ul5jaf7ncvrqfldhk8f54</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDT6cNblK_vH0mvbHuy1wcoTJBgxyEkOP0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>342841512539</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>E.jelzin</string>
+	<key>PROJECT_ID</key>
+	<string>jelzinfirebase</string>
+	<key>STORAGE_BUCKET</key>
+	<string>jelzinfirebase.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:342841512539:ios:72971ce8566a64b11f657e</string>
+	<key>DATABASE_URL</key>
+	<string>https://jelzinfirebase.firebaseio.com</string>
+</dict>
+</plist>

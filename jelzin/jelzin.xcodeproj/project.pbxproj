@@ -16,7 +16,11 @@
 		072ECD0A23FC9F9600CF59B8 /* jelzinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072ECD0923FC9F9600CF59B8 /* jelzinTests.swift */; };
 		072ECD1523FC9F9600CF59B8 /* jelzinUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072ECD1423FC9F9600CF59B8 /* jelzinUITests.swift */; };
 		072ECD2323FCA28500CF59B8 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072ECD2223FCA28500CF59B8 /* FirstViewController.swift */; };
+		077B05A92417DCBB000BB4AB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 077B05A82417DCBB000BB4AB /* GoogleService-Info.plist */; };
 		07923ADE23FED4800083B0B5 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07923ADD23FED4800083B0B5 /* TableViewCell.swift */; };
+		B2C8BB6B652D2F2900533D05 /* Pods_jelzin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F119F7A74647FEA63879B799 /* Pods_jelzin.framework */; };
+		C8124EF22D486FC260B32AD1 /* Pods_jelzinTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D3E5CF0220CB3A9C97880E /* Pods_jelzinTests.framework */; };
+		E361B5A2B09E5ADBDA5E91E9 /* Pods_jelzin_jelzinUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BB49D4CAE022866D4D6E3D1 /* Pods_jelzin_jelzinUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +56,17 @@
 		072ECD1423FC9F9600CF59B8 /* jelzinUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jelzinUITests.swift; sourceTree = "<group>"; };
 		072ECD1623FC9F9600CF59B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		072ECD2223FCA28500CF59B8 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		077B05A82417DCBB000BB4AB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		07923ADD23FED4800083B0B5 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		27FD16F87809767839CB458C /* Pods-jelzin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jelzin.release.xcconfig"; path = "Target Support Files/Pods-jelzin/Pods-jelzin.release.xcconfig"; sourceTree = "<group>"; };
+		7862C0AE4678871433B5FF50 /* Pods-jelzinTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jelzinTests.debug.xcconfig"; path = "Target Support Files/Pods-jelzinTests/Pods-jelzinTests.debug.xcconfig"; sourceTree = "<group>"; };
+		863931A7D95144C5494D7288 /* Pods-jelzin-jelzinUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jelzin-jelzinUITests.release.xcconfig"; path = "Target Support Files/Pods-jelzin-jelzinUITests/Pods-jelzin-jelzinUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9BB49D4CAE022866D4D6E3D1 /* Pods_jelzin_jelzinUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_jelzin_jelzinUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCAA1B2C9E68C7A773D43060 /* Pods-jelzin-jelzinUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jelzin-jelzinUITests.debug.xcconfig"; path = "Target Support Files/Pods-jelzin-jelzinUITests/Pods-jelzin-jelzinUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D4D3E5CF0220CB3A9C97880E /* Pods_jelzinTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_jelzinTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E15C3DBFF6D3594F5FA0F47F /* Pods-jelzin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jelzin.debug.xcconfig"; path = "Target Support Files/Pods-jelzin/Pods-jelzin.debug.xcconfig"; sourceTree = "<group>"; };
+		F119F7A74647FEA63879B799 /* Pods_jelzin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_jelzin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFF9A0B122E8E7FAEFEA89F4 /* Pods-jelzinTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jelzinTests.release.xcconfig"; path = "Target Support Files/Pods-jelzinTests/Pods-jelzinTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2C8BB6B652D2F2900533D05 /* Pods_jelzin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8124EF22D486FC260B32AD1 /* Pods_jelzinTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,12 +90,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E361B5A2B09E5ADBDA5E91E9 /* Pods_jelzin_jelzinUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0227E9C037B5F87EE64191F7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E15C3DBFF6D3594F5FA0F47F /* Pods-jelzin.debug.xcconfig */,
+				27FD16F87809767839CB458C /* Pods-jelzin.release.xcconfig */,
+				BCAA1B2C9E68C7A773D43060 /* Pods-jelzin-jelzinUITests.debug.xcconfig */,
+				863931A7D95144C5494D7288 /* Pods-jelzin-jelzinUITests.release.xcconfig */,
+				7862C0AE4678871433B5FF50 /* Pods-jelzinTests.debug.xcconfig */,
+				FFF9A0B122E8E7FAEFEA89F4 /* Pods-jelzinTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		072ECCE623FC9F8F00CF59B8 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +118,8 @@
 				072ECD0823FC9F9600CF59B8 /* jelzinTests */,
 				072ECD1323FC9F9600CF59B8 /* jelzinUITests */,
 				072ECCF023FC9F8F00CF59B8 /* Products */,
+				0227E9C037B5F87EE64191F7 /* Pods */,
+				27A18127C6EBDC402B162062 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,6 +144,7 @@
 				072ECCF823FC9F8F00CF59B8 /* Main.storyboard */,
 				072ECCFB23FC9F9600CF59B8 /* Assets.xcassets */,
 				072ECCFD23FC9F9600CF59B8 /* LaunchScreen.storyboard */,
+				077B05A82417DCBB000BB4AB /* GoogleService-Info.plist */,
 				072ECD0023FC9F9600CF59B8 /* Info.plist */,
 			);
 			path = jelzin;
@@ -134,6 +168,16 @@
 			path = jelzinUITests;
 			sourceTree = "<group>";
 		};
+		27A18127C6EBDC402B162062 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F119F7A74647FEA63879B799 /* Pods_jelzin.framework */,
+				9BB49D4CAE022866D4D6E3D1 /* Pods_jelzin_jelzinUITests.framework */,
+				D4D3E5CF0220CB3A9C97880E /* Pods_jelzinTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,9 +185,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 072ECD1923FC9F9600CF59B8 /* Build configuration list for PBXNativeTarget "jelzin" */;
 			buildPhases = (
+				BD160941E5712CFCD11BFA82 /* [CP] Check Pods Manifest.lock */,
 				072ECCEB23FC9F8F00CF59B8 /* Sources */,
 				072ECCEC23FC9F8F00CF59B8 /* Frameworks */,
 				072ECCED23FC9F8F00CF59B8 /* Resources */,
+				D435005F36878B7B9A995980 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -158,6 +204,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 072ECD1C23FC9F9600CF59B8 /* Build configuration list for PBXNativeTarget "jelzinTests" */;
 			buildPhases = (
+				73CC1AA0CF16611D5B4981B4 /* [CP] Check Pods Manifest.lock */,
 				072ECD0123FC9F9600CF59B8 /* Sources */,
 				072ECD0223FC9F9600CF59B8 /* Frameworks */,
 				072ECD0323FC9F9600CF59B8 /* Resources */,
@@ -176,9 +223,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 072ECD1F23FC9F9600CF59B8 /* Build configuration list for PBXNativeTarget "jelzinUITests" */;
 			buildPhases = (
+				4F26562B24FE81B72AD1785D /* [CP] Check Pods Manifest.lock */,
 				072ECD0C23FC9F9600CF59B8 /* Sources */,
 				072ECD0D23FC9F9600CF59B8 /* Frameworks */,
 				072ECD0E23FC9F9600CF59B8 /* Resources */,
+				053EB7014D0CD94C1BF68B05 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -239,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				072ECCFF23FC9F9600CF59B8 /* LaunchScreen.storyboard in Resources */,
+				077B05A92417DCBB000BB4AB /* GoogleService-Info.plist in Resources */,
 				072ECCFC23FC9F9600CF59B8 /* Assets.xcassets in Resources */,
 				072ECCFA23FC9F8F00CF59B8 /* Main.storyboard in Resources */,
 			);
@@ -259,6 +309,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		053EB7014D0CD94C1BF68B05 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-jelzin-jelzinUITests/Pods-jelzin-jelzinUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-jelzin-jelzinUITests/Pods-jelzin-jelzinUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-jelzin-jelzinUITests/Pods-jelzin-jelzinUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F26562B24FE81B72AD1785D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-jelzin-jelzinUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		73CC1AA0CF16611D5B4981B4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-jelzinTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD160941E5712CFCD11BFA82 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-jelzin-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D435005F36878B7B9A995980 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-jelzin/Pods-jelzin-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-jelzin/Pods-jelzin-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-jelzin/Pods-jelzin-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		072ECCEB23FC9F8F00CF59B8 /* Sources */ = {
@@ -440,6 +593,7 @@
 		};
 		072ECD1A23FC9F9600CF59B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E15C3DBFF6D3594F5FA0F47F /* Pods-jelzin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -458,6 +612,7 @@
 		};
 		072ECD1B23FC9F9600CF59B8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27FD16F87809767839CB458C /* Pods-jelzin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -476,6 +631,7 @@
 		};
 		072ECD1D23FC9F9600CF59B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7862C0AE4678871433B5FF50 /* Pods-jelzinTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -498,6 +654,7 @@
 		};
 		072ECD1E23FC9F9600CF59B8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFF9A0B122E8E7FAEFEA89F4 /* Pods-jelzinTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -520,6 +677,7 @@
 		};
 		072ECD2023FC9F9600CF59B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCAA1B2C9E68C7A773D43060 /* Pods-jelzin-jelzinUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -540,6 +698,7 @@
 		};
 		072ECD2123FC9F9600CF59B8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 863931A7D95144C5494D7288 /* Pods-jelzin-jelzinUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

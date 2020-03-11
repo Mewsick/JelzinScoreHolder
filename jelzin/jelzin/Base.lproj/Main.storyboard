@@ -156,6 +156,7 @@
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
+                                                    <outlet property="cellView" destination="U7T-J7-CRJ" id="zkF-QN-plF"/>
                                                     <outlet property="playerNameLabel" destination="WAF-Qu-VO4" id="YhI-je-70t"/>
                                                     <outlet property="playerScoreLabel" destination="bRa-B7-Vcc" id="sxp-15-ZtP"/>
                                                 </connections>
