@@ -20,9 +20,10 @@ class FirstViewController: UIViewController, CallbackDelegate{
    
     var players: [player] = []
     var backupScenarios: [[player]] = []
+    var backupTurns: [(Int, Int)] = []
     var currentTurn: Int = 1
     var gameTurns: Int = 0
-    var isPlaying: Bool = true
+    var someoneWon: Bool = false
     let ref = Database.database().reference()
     
     @IBOutlet weak var inputField: UITextField!
@@ -51,9 +52,9 @@ class FirstViewController: UIViewController, CallbackDelegate{
             let vc = segue.destination as? ViewController
             vc?.players = players
             vc?.delegate = self
-            vc?.isPlaying = isPlaying
+            vc?.someoneWon = someoneWon
             vc?.gameTurns = gameTurns
-            vc?.backupScenarios = backupScenarios
+            vc?.backupPlayers = backupScenarios
             vc?.currentTurn = currentTurn
        }
     }
@@ -100,17 +101,13 @@ class FirstViewController: UIViewController, CallbackDelegate{
         }
     }
     
-    func setData(p: [player], b: Bool, gt: Int, bs: [[player]], c: Int){
+    func setData(p: [player], b: Bool, gt: Int, bs: [[player]], c: Int, bt: [(Int, Int)]){
         players = p
         print("players set: \(players)")
-        isPlaying = b
+        someoneWon = b
         gameTurns = gt
         backupScenarios = bs
         currentTurn = c
-    }
-    
-    func setPlayers(p: [player]) {
-        players = p
-        print("players set: \(players)")
+        backupTurns = bt
     }
 }
