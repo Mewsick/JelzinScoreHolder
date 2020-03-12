@@ -78,7 +78,7 @@ class FirstViewController: UIViewController, CallbackDelegate{
             
             print(text)
             print(pscore)
-            run(after: 1) {
+            run(after: 700) {
                 self.listOfPlayers.append(player(name: text, score: pscore, wonGames: pWon, turn: self.gameTurns - 1))
                 print(self.listOfPlayers)
                 self.inputField.text = ""
@@ -86,9 +86,9 @@ class FirstViewController: UIViewController, CallbackDelegate{
             }
         }
     }
-    
-    func run(after seconds: Int, completion: @escaping () -> Void) {
-        let deadline = DispatchTime.now() + .seconds(seconds)
+
+    func run(after mSeconds: Int, completion: @escaping () -> Void) {
+        let deadline = DispatchTime.now() + .milliseconds(mSeconds)
         DispatchQueue.main.asyncAfter(deadline: deadline) {
             completion()
         }

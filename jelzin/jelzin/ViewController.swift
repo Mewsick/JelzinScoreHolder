@@ -99,6 +99,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 players[i].score = 0
                 players[i].turn = 0
             }
+            for i in 0..<players.count{
+                ref.child("Players/" + players[i].name + "/score").setValue("0")
+            }
             isPlaying = true
             tableView.reloadData()
             scoreToBeAdded = 0
@@ -130,7 +133,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                         
                         players[0].wonGames += 1
                         ref.child("Players/" + players[indexPath.row].name + "/wonGames").setValue(players[indexPath.row].wonGames.description)
-                        for i in players{
+                        for i in 0..<players.count{
                             ref.child("Players/" + players[i].name + "/score").setValue("0")
                         }
                     }
@@ -151,7 +154,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.setNameLabel(name: players[indexPath.row].name.description)
         cell.setScoreLabel(score: players[indexPath.row].score.description)
         
-        if players[indexPath.row].turn == currentTurn { //fixa den här raden!
+        if players[indexPath.row].turn == currentTurn {
             cell.cellView.backgroundColor = UIColor.green
         }else{
             cell.cellView.backgroundColor = UIColor.red
