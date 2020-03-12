@@ -19,8 +19,7 @@ struct player {
 class FirstViewController: UIViewController, CallbackDelegate{
    
     var players: [player] = []
-    var backupScenarios: [[player]] = []
-    var backupTurns: [(Int, Int)] = []
+    var backup: [(Int, Int, [player])] = []
     var currentTurn: Int = 1
     var gameTurns: Int = 0
     var someoneWon: Bool = false
@@ -54,9 +53,8 @@ class FirstViewController: UIViewController, CallbackDelegate{
             vc?.delegate = self
             vc?.someoneWon = someoneWon
             vc?.gameTurns = gameTurns
-            vc?.backupPlayers = backupScenarios
             vc?.currentTurn = currentTurn
-            vc?.backupTurns = backupTurns
+            vc?.backup = backup
        }
     }
     
@@ -75,7 +73,6 @@ class FirstViewController: UIViewController, CallbackDelegate{
             var pWon: Int = 0
             ref.child("Players/" + text + "/wonGames").observeSingleEvent(of: .value) { (snapshot) in
                 let playerWon = snapshot.value as? String
-                //print(playerStats!)
                 if playerWon != nil{
                     pWon = Int(playerWon!)!
                     
@@ -102,13 +99,12 @@ class FirstViewController: UIViewController, CallbackDelegate{
         }
     }
     
-    func setData(p: [player], b: Bool, gt: Int, bs: [[player]], c: Int, bt: [(Int, Int)]){
+    func setData(p: [player], b: Bool, gt: Int, c: Int, bu: [(Int, Int, [player])]){
         players = p
         print("players set: \(players)")
         someoneWon = b
         gameTurns = gt
-        backupScenarios = bs
         currentTurn = c
-        backupTurns = bt
+        backup = bu
     }
 }
