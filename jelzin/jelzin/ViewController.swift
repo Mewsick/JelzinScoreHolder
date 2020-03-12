@@ -10,9 +10,7 @@ import UIKit
 import FirebaseDatabase
 
 protocol CallbackDelegate: NSObjectProtocol {
-    func setPlayers(players: [player])
-    func setIsPlaying(b: Bool)
-    func setGameTurns(gt: Int)
+    func setData(p: [player], b: Bool, gt: Int, bs: [[player]], c: Int)
 }
 
 let screenHeight = UIScreen.main.bounds.height
@@ -20,7 +18,8 @@ let screenHeight = UIScreen.main.bounds.height
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var delegate: CallbackDelegate?
     var players: [player] = []
-    var playersBackup: [player] = []
+    var playerTurns: [player] = []
+    var backupScenarios: [[player]] = []
     let ref = Database.database().reference()
     var inputName: String = ""
     var scoreToBeAdded = 0
@@ -52,9 +51,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewWillDisappear(_ animated: Bool) {
         if let delegate = delegate {
-            delegate.setPlayers(players: players)
-            delegate.setIsPlaying(b: isPlaying)
-            delegate.setGameTurns(gt: gameTurns)
+            delegate.setData(p: players, b: isPlaying, gt: gameTurns, bs: backupScenarios, c: currentTurn)
             print("ViewWillDisappear\(players)")
         } else {
             print("Delegate is null")
@@ -83,18 +80,28 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     @IBAction func undoPressed(_ sender: Any) {
-        players = playersBackup
-        gameTurns -= 1
-        tableView.reloadData()
-        scoreLabel.text = "0"
-        scoreToBeAdded = 0
+        if backupScenarios.count > 0{
+            if gameTurns != 0{
+                gameTurns -= 1
+            }else{
+                currentTurn -= 1
+                gameTurns = players.count
+            }
+            players = backupScenarios.last!
+            backupScenarios.remove(at: (backupScenarios.count - 1))
+            scoreLabel.text = "0"
+            scoreToBeAdded = 0
+            for i in 0..<players.count{
+                ref.child("Players/" + players[i].name + "/score").setValue(String(players[i].score))
+                ref.child("Players/" + players[i].name + "/wonGames").setValue(String(players[i].wonGames))
+            }
+            tableView.reloadData()
+        }
     }
     
     @IBAction func resetScorePressed(_ sender: Any) {
-        //lägg till turns -= 1
-        //gör playersbackup till en lista och använd append och delete för att spara oändligt många felsteg
         if !players.isEmpty{
-            playersBackup = players
+            backupScenarios.removeAll()
             for i in 0...players.count - 1{
                 players[i].score = 0
                 players[i].turn = 0
@@ -103,22 +110,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 ref.child("Players/" + players[i].name + "/score").setValue("0")
             }
             isPlaying = true
-            tableView.reloadData()
             scoreToBeAdded = 0
             gameTurns = 0
             currentTurn = 1
             scoreLabel.text = "0"
+            tableView.reloadData()
         }
     }
     
-    //Lägg till vinnar-event vid undo
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        backupScenarios.append(players)
         if scoreToBeAdded != 0 && isPlaying != false{
             if players[indexPath.row].turn < currentTurn{
                 players[indexPath.row].score += scoreToBeAdded
-            
                 ref.child("Players/" + players[indexPath.row].name + "/score").setValue(players[indexPath.row].score.description)
-              
                 scoreToBeAdded = 0
                 scoreLabel.text = scoreToBeAdded.description
                 players[indexPath.row].turn += 1
@@ -140,12 +145,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 }
                 print(players[indexPath.row].turn, currentTurn)
                 tableView.reloadData()
-                playersBackup = players
             }
             else{
                 scoreLabel.text = "spelaren \(players[indexPath.row].name) har redan fått poäng denna omgång"
                 scoreToBeAdded = 0
             }
+            print(players)
         }
     }
     
@@ -165,6 +170,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             return players.count
-        }
+    }
 }
 

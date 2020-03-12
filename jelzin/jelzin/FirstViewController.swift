@@ -17,10 +17,12 @@ struct player {
 }
 
 class FirstViewController: UIViewController, CallbackDelegate{
-    
-    var listOfPlayers: [player] = []
-    var isPlaying: Bool = true
+   
+    var players: [player] = []
+    var backupScenarios: [[player]] = []
+    var currentTurn: Int = 1
     var gameTurns: Int = 0
+    var isPlaying: Bool = true
     let ref = Database.database().reference()
     
     @IBOutlet weak var inputField: UITextField!
@@ -29,7 +31,7 @@ class FirstViewController: UIViewController, CallbackDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("viewdidload\(listOfPlayers)")
+        print("viewdidload\(players)")
         let gesture = UITapGestureRecognizer(target: self, action:  #selector(self.checkAction))
         self.touchView.addGestureRecognizer(gesture)
     }
@@ -39,7 +41,7 @@ class FirstViewController: UIViewController, CallbackDelegate{
     }
     
    @IBAction func pressForReadyToPlay(_ sender: Any) {
-        if listOfPlayers.count != 0 {
+        if players.count != 0 {
             performSegue(withIdentifier: "secondSegue", sender: self)
         }
     }
@@ -47,21 +49,22 @@ class FirstViewController: UIViewController, CallbackDelegate{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is ViewController{
             let vc = segue.destination as? ViewController
-            vc?.players = listOfPlayers
+            vc?.players = players
             vc?.delegate = self
             vc?.isPlaying = isPlaying
             vc?.gameTurns = gameTurns
+            vc?.backupScenarios = backupScenarios
+            vc?.currentTurn = currentTurn
        }
     }
     
     @IBAction func addPlayerPressed(_ sender: Any) {
         if inputField.text != ""{
-            let text: String = inputField.text?.uppercased() ?? "player\(listOfPlayers.count)"
-            
+            let text: String = inputField.text?.uppercased() ?? "player\(players.count)"
+            addPlayer.isEnabled = false
             var pscore: Int = 0
             ref.child("Players/" + text + "/score").observeSingleEvent(of: .value) { (snapshot) in
                 let playerScore = snapshot.value as? String
-                //print(playerStats!)
                 if playerScore != nil{
                     pscore = Int(playerScore!)!
                 }
@@ -73,16 +76,19 @@ class FirstViewController: UIViewController, CallbackDelegate{
                 //print(playerStats!)
                 if playerWon != nil{
                     pWon = Int(playerWon!)!
+                    
                 }
             }
             
             print(text)
             print(pscore)
             run(after: 700) {
-                self.listOfPlayers.append(player(name: text, score: pscore, wonGames: pWon, turn: self.gameTurns - 1))
-                print(self.listOfPlayers)
+                self.players.append(player(name: text, score: pscore, wonGames: pWon, turn: self.gameTurns))
+                print(self.players)
                 self.inputField.text = ""
                 self.view.endEditing(true)
+                self.addPlayer.isEnabled = true
+
             }
         }
     }
@@ -94,16 +100,17 @@ class FirstViewController: UIViewController, CallbackDelegate{
         }
     }
     
-    func setPlayers(players: [player]) {
-        listOfPlayers = players
-        print("players set: \(listOfPlayers)")
+    func setData(p: [player], b: Bool, gt: Int, bs: [[player]], c: Int){
+        players = p
+        print("players set: \(players)")
+        isPlaying = b
+        gameTurns = gt
+        backupScenarios = bs
+        currentTurn = c
     }
     
-    func setIsPlaying(b: Bool) {
-           isPlaying = b
-       }
-    
-    func setGameTurns(gt: Int) {
-           gameTurns = gt
-       }
+    func setPlayers(p: [player]) {
+        players = p
+        print("players set: \(players)")
+    }
 }
