@@ -15,6 +15,7 @@ protocol CallbackDelegate: NSObjectProtocol {
 
 let screenHeight = UIScreen.main.bounds.height
 
+
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var delegate: CallbackDelegate?
     var players: [player] = []

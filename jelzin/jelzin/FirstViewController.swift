@@ -19,6 +19,7 @@ struct player {
 
 //HINDRA MULTIPLER AV SPELARE
 //LÖS PROBLEMET MED ANTALET CELLS EFTER ATT MAN LAGT TILL EN SPELARE OCH ANVÄNT UNDO FULLT UT
+//LÖS PROBLEM DÄR SPELARE SOM LÄGGS TILL EFTER SPELSTART FÅR GRÖN BAKGRUND (HÄNDER FÖRSTA RUNDAN)
 
 
 class FirstViewController: UIViewController, CallbackDelegate{
@@ -87,7 +88,7 @@ class FirstViewController: UIViewController, CallbackDelegate{
             print(text)
             print(pscore)
             run(after: 700) {
-                self.players.append(player(name: text, score: pscore, wonGames: pWon, turn: self.gameTurns))
+                self.players.append(player(name: text, score: pscore, wonGames: pWon, turn: (self.players.sorted(by: { $0.turn < $1.turn }).first?.turn ?? 0)))
                 print(self.players)
                 self.inputField.text = ""
                 self.view.endEditing(true)
