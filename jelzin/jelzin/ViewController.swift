@@ -83,7 +83,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if backup.count > 0{
             gameTurns = backup.last!.0
             currentTurn = backup.last!.1
-            backup.remove(at: backup.count - 1)
             players = backup.last!.2
             backup.remove(at: (backup.count - 1))
             scoreLabel.text = "0"

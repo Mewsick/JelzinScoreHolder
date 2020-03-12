@@ -16,6 +16,11 @@ struct player {
     var turn: Int
 }
 
+
+//HINDRA MULTIPLER AV SPELARE
+//LÖS PROBLEMET MED ANTALET CELLS EFTER ATT MAN LAGT TILL EN SPELARE OCH ANVÄNT UNDO FULLT UT
+
+
 class FirstViewController: UIViewController, CallbackDelegate{
    
     var players: [player] = []
