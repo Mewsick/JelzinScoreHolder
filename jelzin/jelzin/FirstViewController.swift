@@ -56,6 +56,7 @@ class FirstViewController: UIViewController, CallbackDelegate{
             vc?.gameTurns = gameTurns
             vc?.backupPlayers = backupScenarios
             vc?.currentTurn = currentTurn
+            vc?.backupTurns = backupTurns
        }
     }
     
