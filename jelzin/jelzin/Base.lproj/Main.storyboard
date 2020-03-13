@@ -46,7 +46,20 @@
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hzg-T1-ZCw" userLabel="BottomView">
                                         <rect key="frame" x="0.0" y="387" width="414" height="155"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5C1-7e-HgM" userLabel="APITextField">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="155"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="5C1-7e-HgM" firstAttribute="height" secondItem="hzg-T1-ZCw" secondAttribute="height" id="O69-0C-d52"/>
+                                            <constraint firstItem="5C1-7e-HgM" firstAttribute="width" secondItem="hzg-T1-ZCw" secondAttribute="width" id="a4l-en-elX"/>
+                                            <constraint firstItem="5C1-7e-HgM" firstAttribute="leading" secondItem="hzg-T1-ZCw" secondAttribute="leading" id="qDv-Cx-1SY"/>
+                                            <constraint firstItem="5C1-7e-HgM" firstAttribute="centerY" secondItem="hzg-T1-ZCw" secondAttribute="centerY" id="uFB-at-teu"/>
+                                        </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h46-9S-0ee">
                                         <rect key="frame" x="0.0" y="542" width="414" height="154.5"/>
@@ -89,6 +102,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="chM-UF-O8h"/>
                     <connections>
+                        <outlet property="APITextField" destination="5C1-7e-HgM" id="aLU-wy-gyz"/>
                         <outlet property="addPlayer" destination="bav-W6-ZgV" id="XO7-13-1uK"/>
                         <outlet property="inputField" destination="dQg-nN-yue" id="lHI-U4-CPd"/>
                         <outlet property="touchView" destination="nt5-J0-8fs" id="roO-Wo-hTS"/>
@@ -98,7 +112,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MVe-Su-a5f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="171.01449275362319" y="129.91071428571428"/>
+            <point key="canvasLocation" x="169.56521739130437" y="129.91071428571428"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">

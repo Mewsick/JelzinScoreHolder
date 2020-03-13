@@ -33,6 +33,7 @@ class FirstViewController: UIViewController, CallbackDelegate{
     
     @IBOutlet weak var inputField: UITextField!
     @IBOutlet weak var addPlayer: UIButton!
+    @IBOutlet weak var APITextField: UITextField!
     @IBOutlet var touchView: UIView!
     
     override func viewDidLoad() {
@@ -40,7 +41,25 @@ class FirstViewController: UIViewController, CallbackDelegate{
         print("viewdidload\(players)")
         let gesture = UITapGestureRecognizer(target: self, action:  #selector(self.checkAction))
         self.touchView.addGestureRecognizer(gesture)
+        
+        
+        let teamAPI = TeamAPI()
+        teamAPI.APIRequest(completion: { result in
+            switch result {
+            case .success(let printStats):
+                DispatchQueue.main.async {
+                    print(printStats.api.statistics.matchs.wins.total)
+                    self.APITextField.text = "Liverpool har vunnit " + printStats.api.statistics.matchs.wins.total.description + " matcher! Kan du vinna fler?"
+                    self.APITextField.adjustsFontSizeToFitWidth = true
+                    //self.tempLabel.text = displayWeather.main.temp.toString()
+                }
+            case .failure(let error): print("Error \(error)")
+            }
+        })
+        
+        
     }
+    
     
     @objc func checkAction(sender : UITapGestureRecognizer) {
         self.view.endEditing(true)
@@ -81,7 +100,6 @@ class FirstViewController: UIViewController, CallbackDelegate{
                 let playerWon = snapshot.value as? String
                 if playerWon != nil{
                     pWon = Int(playerWon!)!
-                    
                 }
             }
             

@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07169EED241BA01100C028C2 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07169EEC241BA01100C028C2 /* API.swift */; };
+		07169EEF241BBE6E00C028C2 /* teamProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07169EEE241BBE6E00C028C2 /* teamProperties.swift */; };
 		072ECCF323FC9F8F00CF59B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072ECCF223FC9F8F00CF59B8 /* AppDelegate.swift */; };
 		072ECCF523FC9F8F00CF59B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072ECCF423FC9F8F00CF59B8 /* SceneDelegate.swift */; };
 		072ECCF723FC9F8F00CF59B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072ECCF623FC9F8F00CF59B8 /* ViewController.swift */; };
@@ -41,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07169EEC241BA01100C028C2 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		07169EEE241BBE6E00C028C2 /* teamProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = teamProperties.swift; sourceTree = "<group>"; };
 		072ECCEF23FC9F8F00CF59B8 /* jelzin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jelzin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		072ECCF223FC9F8F00CF59B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		072ECCF423FC9F8F00CF59B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,7 +111,6 @@
 				7862C0AE4678871433B5FF50 /* Pods-jelzinTests.debug.xcconfig */,
 				FFF9A0B122E8E7FAEFEA89F4 /* Pods-jelzinTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -139,7 +142,9 @@
 				072ECCF223FC9F8F00CF59B8 /* AppDelegate.swift */,
 				072ECCF423FC9F8F00CF59B8 /* SceneDelegate.swift */,
 				072ECCF623FC9F8F00CF59B8 /* ViewController.swift */,
+				07169EEC241BA01100C028C2 /* API.swift */,
 				072ECD2223FCA28500CF59B8 /* FirstViewController.swift */,
+				07169EEE241BBE6E00C028C2 /* teamProperties.swift */,
 				07923ADD23FED4800083B0B5 /* TableViewCell.swift */,
 				072ECCF823FC9F8F00CF59B8 /* Main.storyboard */,
 				072ECCFB23FC9F9600CF59B8 /* Assets.xcassets */,
@@ -421,7 +426,9 @@
 				07923ADE23FED4800083B0B5 /* TableViewCell.swift in Sources */,
 				072ECCF723FC9F8F00CF59B8 /* ViewController.swift in Sources */,
 				072ECCF323FC9F8F00CF59B8 /* AppDelegate.swift in Sources */,
+				07169EEF241BBE6E00C028C2 /* teamProperties.swift in Sources */,
 				072ECCF523FC9F8F00CF59B8 /* SceneDelegate.swift in Sources */,
+				07169EED241BA01100C028C2 /* API.swift in Sources */,
 				072ECD2323FCA28500CF59B8 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -16,10 +16,13 @@ protocol CallbackDelegate: NSObjectProtocol {
 let screenHeight = UIScreen.main.bounds.height
 
 
+//KONTROLLERA VAD SOM SKER MED UNDO EFTER ATT NÅGON HAR VUNNIT
+
+
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var delegate: CallbackDelegate?
     var players: [player] = []
-    var playerTurns: [player] = []
+    //var playerTurns: [player] = []
     var backup: [(Int, Int, [player])] = []
     let ref = Database.database().reference()
     var inputName: String = ""
