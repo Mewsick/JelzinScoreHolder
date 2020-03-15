@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		07169EED241BA01100C028C2 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07169EEC241BA01100C028C2 /* API.swift */; };
 		07169EEF241BBE6E00C028C2 /* teamProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07169EEE241BBE6E00C028C2 /* teamProperties.swift */; };
+		07169EF3241BE38100C028C2 /* unnamed.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 07169EF2241BE38100C028C2 /* unnamed.jpg */; };
 		072ECCF323FC9F8F00CF59B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072ECCF223FC9F8F00CF59B8 /* AppDelegate.swift */; };
 		072ECCF523FC9F8F00CF59B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072ECCF423FC9F8F00CF59B8 /* SceneDelegate.swift */; };
 		072ECCF723FC9F8F00CF59B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072ECCF623FC9F8F00CF59B8 /* ViewController.swift */; };
@@ -45,6 +46,7 @@
 /* Begin PBXFileReference section */
 		07169EEC241BA01100C028C2 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		07169EEE241BBE6E00C028C2 /* teamProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = teamProperties.swift; sourceTree = "<group>"; };
+		07169EF2241BE38100C028C2 /* unnamed.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = unnamed.jpg; sourceTree = "<group>"; };
 		072ECCEF23FC9F8F00CF59B8 /* jelzin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jelzin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		072ECCF223FC9F8F00CF59B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		072ECCF423FC9F8F00CF59B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				072ECCFD23FC9F9600CF59B8 /* LaunchScreen.storyboard */,
 				077B05A82417DCBB000BB4AB /* GoogleService-Info.plist */,
 				072ECD0023FC9F9600CF59B8 /* Info.plist */,
+				07169EF2241BE38100C028C2 /* unnamed.jpg */,
 			);
 			path = jelzin;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				072ECCFF23FC9F9600CF59B8 /* LaunchScreen.storyboard in Resources */,
 				077B05A92417DCBB000BB4AB /* GoogleService-Info.plist in Resources */,
 				072ECCFC23FC9F9600CF59B8 /* Assets.xcassets in Resources */,
+				07169EF3241BE38100C028C2 /* unnamed.jpg in Resources */,
 				072ECCFA23FC9F8F00CF59B8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -606,6 +610,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P6JN2ZUYF2;
 				INFOPLIST_FILE = jelzin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -625,6 +630,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P6JN2ZUYF2;
 				INFOPLIST_FILE = jelzin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

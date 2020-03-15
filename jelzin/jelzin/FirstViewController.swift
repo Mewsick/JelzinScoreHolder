@@ -19,7 +19,6 @@ struct player {
 
 //HINDRA MULTIPLER AV SPELARE
 //LÖS PROBLEMET MED ANTALET CELLS EFTER ATT MAN LAGT TILL EN SPELARE OCH ANVÄNT UNDO FULLT UT
-//LÖS PROBLEM DÄR SPELARE SOM LÄGGS TILL EFTER SPELSTART FÅR GRÖN BAKGRUND (HÄNDER FÖRSTA RUNDAN)
 
 
 class FirstViewController: UIViewController, CallbackDelegate{
@@ -51,15 +50,11 @@ class FirstViewController: UIViewController, CallbackDelegate{
                     print(printStats.api.statistics.matchs.wins.total)
                     self.APITextField.text = "Liverpool har vunnit " + printStats.api.statistics.matchs.wins.total.description + " matcher! Kan du vinna fler?"
                     self.APITextField.adjustsFontSizeToFitWidth = true
-                    //self.tempLabel.text = displayWeather.main.temp.toString()
                 }
             case .failure(let error): print("Error \(error)")
             }
         })
-        
-        
     }
-    
     
     @objc func checkAction(sender : UITapGestureRecognizer) {
         self.view.endEditing(true)
